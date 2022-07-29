@@ -1,0 +1,1456 @@
+@charset "UTF-8";
+
+* {margin: 0; padding: 0; font-family: '고딕';}
+body {width: 100%; height: 100%;}
+
+ul,li {list-style: none;}
+a {text-decoration: none;}
+h1 {font-size: 32px; font-weight: normal; color: #333;}
+span.skip {display: none;}
+
+/*헤더-메인메뉴, 어사이드*/
+header.hdflex-con {
+	display: flex;
+	flex-flow: row nowrap;
+	width: 100%;
+	background: #333;
+	line-height: 80px;
+}
+header ul.lnb li a {
+	color: #fff;
+	font-size: 14px;
+}
+header nav#menu{
+	width: 75%;
+	padding-left: 4%;
+	box-sizing: border-box;
+}
+header nav#menu ul.lnb li{
+	display: inline-block;
+	margin-right: 35px;
+}
+header aside#gnb {
+	text-align: right;
+	width: 25%;
+	padding-right: 4%;
+}
+header aside#gnb ul.lnb li {
+	display: inline-block;
+	margin-left: 30px;
+}
+
+/*오버 네비게이션*/
+div.middlewrap {
+	display: none;
+}
+div.hdflex-over {
+	display: flex;
+	flex-flow: row nowrap;
+	width: 100%;
+	background: #fffef0;
+	line-height: 80px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 2;
+}
+div.hdflex-over ul.lnb.over li a {
+	color: #333;
+	font-size: 14px;
+}
+div.hdflex-over nav#oversub{
+	width: 80%;
+	padding-left: 4%;
+}
+div.hdflex-over nav#oversub ul.lnb.over li{
+	display: inline-block;
+	margin-right: 35px;
+}
+div.hdflex-over nav#oversub ul.lnb.over li:nth-child(10) a img {
+	width: 20px;
+}
+div.hdflex-over nav#oversub ul.lnb.over li:last-child a {
+	display: block;
+	width: 45px;
+	background-image: url(../img/close.png);
+	background-size: 13px;
+	background-repeat: no-repeat;
+	background-position: 100% 49%;
+}
+div.hdflex-over aside#gnbOver {
+	text-align: right;
+	width: 12%;
+	padding-right: 4%;
+}
+div.hdflex-over aside#gnbOver ul.lnb.over li {
+	display: inline-block;
+	margin-left: 30px;
+}
+div.hdflex-over.upper {
+}
+
+/*서브메뉴 공통 스타일*/
+div.lowfloor{
+	width: 100%;
+	height: 100%;
+	
+	z-index: 1;
+	overflow: hidden;
+	display: none;
+}
+div.lowfloor div.submenu{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-flow: row wrap;
+}
+div.lowfloor div.submenu span.baseCheck {
+	width: 100%;
+	height: 1.5px;
+	background: #d6d5ca;
+	position: relative;
+}
+div.lowfloor div.submenu h1.sublogo {
+	width: 20%;
+	height: 100%;
+	background: url(../img/logo-000.png) no-repeat;
+	background-size: 150px;
+	background-position: 50% 60px;
+}	
+div.lowfloor div.submenu div.subwrap {
+	width: 45%;
+	padding-top: 60px;
+	position: relative;
+}
+div.lowfloor div.submenu div.subwrap ul {
+	width: 33%;
+	float: left;
+}
+div.lowfloor div.submenu div.subwrap ul li{
+	width: 100%;
+	display: block;
+	line-height: 240%;
+	font-size: 16px;
+}
+div.lowfloor div.submenu div.subwrap ul li:nth-child(1) {
+	line-height: 260%;
+	font-size: 18px;
+}
+div.lowfloor div.submenu div.subwrap ul li a {color: #333;}
+div.lowfloor div.submenu div.subwrap ul li:hover a {
+	border-bottom: 1px solid #333;
+}
+div.lowfloor div.submenu div.subwrap div.minithum {
+	text-align: left;
+	position: absolute;
+	top: 60%;
+	right: 25%;
+}
+div.subwrap div.minithum p {
+	font-size: 14px;
+}
+div.subwrap div.minithum a {
+	display: block;
+	width: 150px;
+	color: #333;
+	font-size: 20px;
+	line-height: 170%;
+	background: url(../img/arrow-000.png) no-repeat;
+	background-size: 16px;
+	background-position: 95%;
+}
+div.subwrap div.minithum span {
+	display: block;
+	width: 320px;
+	height: 180px;
+}
+div.lowfloor div.submenu span.subimg {
+	width: 35%;
+	height: 100%;
+}
+
+
+/*서브메뉴01-스킨케어*/
+div.lowfloor div.submenu#skin {
+	background: #f0efe0;
+	display: none;
+}
+div.lowfloor div.submenu#skin span.selectCheck {
+	width: 54px;
+	height: 2px;
+	background: #333;
+	position: absolute;
+	left: 4%;
+}
+div.lowfloor div.submenu#skin div.subwrap div.semiwrap{
+	width: 32%;
+	float: left;
+}
+div.lowfloor div.submenu#skin div.subwrap div.semiwrap ul {
+	width: 100%;
+}
+div.lowfloor div.submenu#skin div.subwrap div.semiwrap ul.range {
+	margin-top: 15px;
+}
+div.lowfloor div.submenu#skin div.subwrap ul.newproduct {
+	float: right;
+}
+div.lowfloor div.submenu#skin div.subwrap ul.newproduct:after{
+	clear: both;
+	display: block;
+	content: '';
+}
+div.subwrap.skincare img {
+	width: 15px;
+}
+div.subwrap.skincare div.minithum span {
+	background: url(../img/nav-01skin-mini.jpg);
+	background-size: cover;
+}
+div.lowfloor div.submenu#skin span.subimg {
+	width: 35%;
+	height: 100%;
+	background: url(../img/nav-01skin.jpg);
+	background-size: cover;
+}
+
+
+/*서브메뉴2:바디핸드*/
+div.lowfloor div.submenu#body {
+	background: #ece3d3;
+	display: none;
+}
+div.lowfloor div.submenu#body span.selectCheck {
+	width: 70px;
+	height: 2px;
+	background: #333;
+	position: absolute;
+	left: 9.4%;
+}
+div.lowfloor div.submenu#body div.subwrap ul.newproduct {
+	float: right;
+}
+div.lowfloor div.submenu#body div.subwrap ul.newproduct:after{
+	clear: both;
+	display: block;
+	content: '';
+}
+div.lowfloor div.submenu#body span.subimg {
+	width: 35%;
+	height: 100%;
+	background: url(../img/nav-02body.jpg);
+	background-size: cover;
+}
+
+/*서브메뉴3:헤어제품*/
+div.lowfloor div.submenu#hair {
+	background: #ece3d3;
+	display: none;
+}
+div.lowfloor div.submenu#hair span.selectCheck {
+	width: 34px;
+	height: 2px;
+	background: #333;
+	position: absolute;
+	left: 15.3%;
+}
+div.lowfloor div.submenu#hair div.subwrap ul.newproduct {
+	float: right;
+}
+div.lowfloor div.submenu#hair div.subwrap ul.newproduct:after{
+	clear: both;
+	display: block;
+	content: '';
+}
+div.lowfloor div.submenu#hair span.subimg {
+	width: 35%;
+	height: 100%;
+	background: url(../img/nav-03hair.jpg);
+	background-size: cover;
+}
+
+/*서브메뉴4:프레그란스*/
+div.lowfloor div.submenu#fragrance {
+	background: #f5ece4;
+	display: none;
+}
+div.lowfloor div.submenu#fragrance span.selectCheck {
+	width: 30px;
+	height: 2px;
+	background: #333;
+	position: absolute;
+	left: 19%;
+}
+div.lowfloor div.submenu#fragrance div.subwrap div.semiwrap{
+	width: 32%;
+	float: left;
+}
+div.lowfloor div.submenu#fragrance div.subwrap div.semiwrap ul {
+	width: 100%;
+}
+div.lowfloor div.submenu#fragrance div.subwrap div.semiwrap ul.range {
+	margin-top: 15px;
+}
+div.lowfloor div.submenu#fragrance div.subwrap ul.newproduct {
+	float: right;
+}
+div.subwrap.fragance div.minithum span {
+	background: url(../img/nav-04fragrance-mini.jpg) no-repeat;
+	background-size: 142%;
+	background-position: 90% 78%;
+}
+div.lowfloor div.submenu#fragrance div.subwrap ul.newproduct:after{
+	clear: both;
+	display: block;
+	content: '';
+}
+div.lowfloor div.submenu#fragrance span.subimg {
+	width: 35%;
+	height: 100%;
+	background: url(../img/nav-04fragrance.jpg);
+	background-size: cover;
+}
+
+/*서브메뉴5 : 홈*/
+div.lowfloor div.submenu#home {
+	background: #f7f1ec;
+	display: none;
+}
+div.lowfloor div.submenu#home span.selectCheck {
+	width: 16px;
+	height: 2px;
+	background: #333;
+	position: absolute;
+	left: 22.7%;
+}
+div.lowfloor div.submenu#home div.subwrap ul.newproduct {
+	float: right;
+}
+div.lowfloor div.submenu#home div.subwrap ul.newproduct:after{
+	clear: both;
+	display: block;
+	content: '';
+}
+div.lowfloor div.submenu#home span.subimg {
+	width: 35%;
+	height: 100%;
+	background: url(../img/nav-05home.jpg);
+	background-size: cover;
+}
+
+/*서브메뉴6 : 트레블*/
+div.lowfloor div.submenu#travel {
+	background: #e9f0e3;
+	display: none;
+}
+div.lowfloor div.submenu#travel span.selectCheck {
+	width: 110px;
+	height: 2px;
+	background: #333;
+	position: absolute;
+	left: 25.6%;
+}
+div.lowfloor div.submenu#travel div.subwrap ul.newproduct {
+	float: right;
+}
+div.lowfloor div.submenu#travel div.subwrap ul.newproduct:after{
+	clear: both;
+	display: block;
+	content: '';
+}
+div.lowfloor div.submenu#travel span.subimg {
+	width: 35%;
+	height: 100%;
+	background: url(../img/nav-06travel.jpg);
+	background-size: cover;
+}
+
+/*서브메뉴7 : 기프트*/
+div.lowfloor div.submenu#gift {
+	background: #ebeadf;
+	display: none;
+}
+div.lowfloor div.submenu#gift span.selectCheck {
+	width: 90px;
+	height: 2px;
+	background: #333;
+	position: absolute;
+	left: 33.5%;
+}
+div.lowfloor div.submenu#gift div.subwrap ul.newproduct {
+	float: right;
+}
+div.lowfloor div.submenu#gift div.subwrap ul.newproduct:after{
+	clear: both;
+	display: block;
+	content: '';
+}
+div.lowfloor div.submenu#gift span.subimg {
+	width: 35%;
+	height: 100%;
+	background: url(../img/nav-07gifts.jpg);
+	background-size: cover;
+}
+
+/*서브메뉴8 : 읽기*/
+div.lowfloor div.submenu#read {
+	background: #fefef2;
+	display: none;
+}
+div.lowfloor div.submenu#read span.selectCheck {
+	width: 30px;
+	height: 2px;
+	background: #333;
+	position: absolute;
+	left: 40.4%;
+}
+div.lowfloor div.submenu#read div.subwrap.read div.leftsub {
+	width: 35%;
+	height: 500px;
+	float: left;
+}
+div.lowfloor div.submenu#read div.subwrap.read div.leftsub p {
+	font-size: 14px;
+	margin: 12px 0;
+}
+div.lowfloor div.submenu#read div.subwrap.read div.leftsub ul {
+	width: 100%;
+	margin-bottom: 12px;
+}
+div.lowfloor div.submenu#read div.subwrap.read div.leftsub ul a{
+	font-size: 18px;
+	color: #333;
+}
+div.lowfloor div.submenu#read div.subwrap.read div.leftsub ul>li {
+	font-size: 14px;
+	color: #333;
+}
+div.lowfloor div.submenu#read div.subwrap.read div.rightsub {
+	width: 32%;
+	height: 500px;
+	float: left;
+}
+div.lowfloor div.submenu#read div.subwrap.read div.rightsub ul {
+	width: 95%;
+	margin-bottom: 12px;
+	padding-left: 10px;
+}
+div.lowfloor div.submenu#read div.subwrap ul.newproduct:after{
+	clear: both;
+	display: block;
+	content: '';
+}
+div.lowfloor div.submenu#read span.subimg {
+	width: 35%;
+	height: 100%;
+	background: url(../img/nav-08read.jpg);
+	background-size: cover;
+}
+div.lowfloor div.submenu div.subwrap.read div.minithum {
+	position: absolute;
+	top: 60%;
+	left: 35%;
+}
+div.lowfloor div.submenu div.subwrap.read div.minithum a {
+	font-size: 18px;
+	width: 200px;
+}
+
+/*서브메뉴9 : 서치*/
+div.lowfloor div.submenu#store {
+	background: #fffef2;
+	display: none;
+}
+div.lowfloor div.submenu#store>span.baseCheck {
+	display: block;
+}
+div.lowfloor div.submenu#store span.selectCheck {
+	width: 42px;
+	height: 2px;
+	background: #333;
+	position: absolute;
+	left: 43.9%;
+}
+div.lowfloor div.submenu#store h1.sublogo02 {
+	width: 150px;
+	height: 100px;
+	background: url(../img/logo-000.png) no-repeat;
+	background-size: 140px;
+	background-position: 50px;
+	padding-top: 100px;
+	padding-left: 40px;
+}
+div.lowfloor div.submenu#store a.location {
+	width: 240px;
+	text-align: center;
+	display: block;
+	box-sizing: border-box;
+	padding: 20px 25px;
+	border: 1px solid #333;
+	margin-left: 50px;
+	color: #333;
+	font-size: 16px;
+}
+div.lowfloor div.submenu#store a.location:hover {
+	border: 1px solid #fff;
+	color: #fff;
+	background: #333;
+}
+div.lowfloor div.submenu#store>p {
+	font-size: 14px;
+	font-weight: bold;
+	padding: 20px 50px;
+	margin-top: 10px;
+}
+div.lowfloor div.submenu#store span.border {
+	display: block;
+	width: 450px;
+	height: 60px;
+	padding: 3px;
+	margin-left: 45px;
+	margin-top: 30px;
+	border-bottom: 1px solid #333;
+}
+div.lowfloor div.submenu#store span.border>input {
+	width: 400px;
+	font-size: 26px;
+	padding: 7px;
+	background: #fffef2;
+	border: 0px;
+	text-align: left;
+}
+div.lowfloor div.submenu#store span.border>a.city {
+	display: inline-block;
+	width: 30px;
+	height: 44px;
+	background: url(../img/arrow-000.png) no-repeat;
+	background-size: 20px;
+	background-position: 0 24px;
+}
+
+/*서브메뉴10 : 검색*/
+div.lowfloor div.submenu#search {
+	background: #fffef2;
+	display: none;
+}
+div.lowfloor div.submenu#search>span.baseCheck {
+	display: block;
+}
+div.lowfloor div.submenu#search span.selectCheck {
+	width: 40px;
+	height: 2px;
+	background: #333;
+	position: absolute;
+	left: 48%;
+}
+div.lowfloor div.submenu#search h1.sublogo02 {
+	width: 150px;
+	height: 50px;
+	background: url(../img/logo-000.png) no-repeat;
+	background-size: 140px;
+	background-position: 50px;
+	padding-top: 70px;
+	padding-left: 40px;
+}
+div.lowfloor div.submenu#search>p {
+	font-size: 14px;
+	padding: 20px 50px;
+	margin-top: 10px;
+}
+div.lowfloor div.submenu#search span.border {
+	display: block;
+	width: 450px;
+	height: 60px;
+	padding: 3px;
+	margin-left: 45px;
+	margin-top: 10px;
+	border-bottom: 1px solid #333;
+}
+div.lowfloor div.submenu#search span.border>input {
+	width: 400px;
+	font-size: 26px;
+	padding: 7px;
+	background: #fffef2;
+	border: 0px;
+	text-align: left;
+}
+div.lowfloor div.submenu#search span.border>a {
+	display: inline-block;
+	width: 30px;
+	height: 44px;
+	background: url(../img/arrow-000.png) no-repeat;
+	background-size: 20px;
+	background-position: 0 24px;
+}
+div.lowfloor div.submenu#search>ul>li a {
+	font-size: 20px;
+	font-weight: normal;
+	margin-left: 50px;
+	color: #333;
+	line-height: 180%;
+	transition: all .5s;
+}
+div.lowfloor div.submenu#search>ul>li a:hover {
+	color: #888;
+}
+
+/*로그인 모달*/
+div.modal {
+	background: rgba(0, 0, 0, 0.6);
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	display: none;
+}
+div.modal div.login {
+	width: 520px;
+	height: 450px;
+	background: #fff;
+	text-align: center;
+	border: 1px solid #333;
+	position: fixed;
+	top: 20%;
+	left: 50%;
+	margin-left: -260px;
+	z-index: 2;
+}
+div.modal div.login a{
+	display: block;
+	text-align: right;
+	padding-top: 30px;
+	padding-right: 30px;
+}
+div.modal div.login a img {
+	width: 15px;
+}
+div.modal div.login h1 {
+	text-align: left;
+	padding: 30px 50px 20px;
+}
+div.modal div.login p {
+	font-size: 15px;
+	text-align: left;
+	padding-left: 50px;
+	padding-bottom: 40px;
+}
+div.modal div.login input {
+	text-align: left;
+	width: 78%;
+	font-size: 18px;
+	padding: 5px;
+	margin-top: 40px;
+	border: 0px;
+	border-bottom: 1px solid #333;
+}
+div.modal div.login button.btn {
+	width: 80%;
+	font-size: 16px;
+	background: #333;
+	color: #fff;
+	padding: 15px;
+	margin-top: 70px;
+	border: 0px;
+}
+.modal.show {
+	display: block;
+}
+
+/*카트*/
+div.cart {
+	background: #000;
+	width: 100%;
+	height: 80px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 3;
+	display: none;
+}
+div.cart p {
+	text-align: right;
+	padding-top: 30px;
+	padding-right: 40px;
+	font-size: 14px;
+	color: #fff;
+}
+
+/*메인*/
+main {background: #fffef2;}
+
+/*섹션1 : 메인 이미지 슬라이드-이미지*/
+main section div#slide {
+	width: 100%;
+	position: relative;
+}
+
+/*섹션1 : 로고,타이틀,설명,더보기배너*/
+
+/*★로고*/
+main section div#slide h2 {
+	position: absolute;
+	top: 105px;
+	left: 80px;
+}
+main section div#slide h2 img {
+	width: 150px;
+}
+/*★타이틀*/
+main section div#slide div#mainment {
+	color: #fff;
+	font-size: 14px;
+}
+main section div#slide div#mainment span {
+	font-size: 26px;
+	font-weight: normal;
+	letter-spacing: 1px;
+	position: absolute;
+	top: 112px;
+	left: 300px;
+	color: #fff;
+}
+/*★설명*/
+main section div#slide div#mainment p{
+	width: 420px;
+	letter-spacing: 0.5px;
+	position: absolute;
+	top: 180px;
+	left: 300px;
+	line-height: 160%;
+}
+/*★배너*/
+main section div#slide div#mainment a#quick {
+	padding: 18px 90px 18px 25px;
+	color: #fff;
+	font-weight: normal;
+	border: 1px solid #fff;
+	background: url(../img/arrow-fff.png);
+	background-size: 12px;
+	background-repeat: no-repeat;
+	background-position: 90%;
+	position: absolute;
+	top: 280px;
+	left: 300px;
+	transition: all 0.3s;
+}
+main section div#slide div#mainment a#quick:hover {
+	background: url(../img/arrow-000.png);
+	background-size: 12px;
+	background-repeat: no-repeat;
+	background-position: 90%;
+	background-color: #fff;
+	color: #333;
+}
+
+/*섹션:1 이미지 슬라이드-추가이미지*/
+main section div#slide p.slideImg {
+	display: block;
+	width: 100%;
+	height: 540px;
+	background: url(../img/img-main01.jpg);
+	background-size: cover;
+	background-position: 30%;
+	float: left;
+}
+
+/*leftEx:왼쪽설명(공통)*/
+/*섹션2 : 새로운 제품군 소개*/
+main article.leftEx {
+	width: 30%;
+	padding-top: 100px;
+	padding-left: 5%;
+	float: left;
+}
+main article.leftEx h1 {
+	font-size: 16px;
+	padding-bottom: 20px;
+	font-weight: normal;
+}
+main article.leftEx h6 {
+	font-size: 32px;
+	padding-bottom: 20px;
+	font-weight: normal;
+} 
+main article.leftEx p {
+	width: 80%;
+	font-size: 16px;
+	line-height: 150%;
+	padding-bottom: 70px;
+}
+main article.leftEx a {
+	display: block;
+	padding: 22px 60px 22px 25px;
+	color: #333;
+	font-weight: normal;
+	font-size: 14px;
+	background: url(../img/arrow-000.png);
+	background-size: 12px;
+	background-repeat: no-repeat;
+	background-position: 90%;
+	position: absolute;
+	border: 1px solid #333;
+	transition: all 0.3s;
+}
+main article.leftEx a:hover {
+	background: url(../img/arrow-fff.png);
+	background-size: 12px;
+	background-repeat: no-repeat;
+	background-position: 90%;
+	background-color: #333;
+	color: #fff;
+}
+main section#second::after {
+	clear: both;
+	display: block;
+	content: '';
+}
+section#second article.leftEx h2 {
+	font-size: 16px;
+	padding-bottom: 20px;
+	font-weight: normal
+}
+
+/*rightEx:오른쪽 사진(공통)*/
+/*섹션2 : 새로운 제품군 소개*/
+main article.rightEx {
+	width: 62%;
+	padding: 100px 0;
+	float: right;
+}
+main article.rightEx span.image {
+	display: block;
+	width: 100%;
+	height: 540px;
+	background: url(../img/img-sec01.jpg);
+	background-size: cover;
+	background-position: 70%;
+}
+
+/*섹션3:신제품*/
+section#newProd{
+	width: 90%;
+	padding: 50px 5%;
+	height: 480px;
+	overflow: hidden;
+	text-align: center;
+	position: relative;
+}
+section#newProd ul.sliding.new {
+	display: flex;
+	flex-flow: row wrap;
+	width: 130%;
+	height: 480px;
+}
+section#newProd ul.sliding li.product {
+	width: 20%;
+	display: inline-block;
+	text-align: center;
+}
+section#newProd ul.sliding li.product:last-child {
+	display: none;
+}
+section#newProd ul.sliding li.product a {
+	color: #333;
+	font-size: 14px;
+	padding-top: 410px;
+	display: block;
+	height: 30px;
+}
+section#newProd ul.sliding li.product p {
+	font-size: 14px;
+}
+section#newProd ul.sliding li.product.one a {
+	background: url(../img/img-01-eye.png);
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+section#newProd ul.sliding li.product.two a {
+	background: url(../img/img-02-rose.png);
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+section#newProd ul.sliding li.product.three a {
+	background: url(../img/img-03-sublime.png);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-position: 0 65%;
+}
+section#newProd ul.sliding li.product.four a {
+	background: url(../img/img-04-b.png);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-position: 0 65%;
+}
+section#newProd ul.sliding li.product.five a {
+	background: url(../img/img-05-lucent.png);
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+section#newProd ul.sliding li.product a:hover {
+	text-decoration: underline;
+}
+
+
+/*섹션3:화살표*/
+p.left, p.right {
+	display: block;
+	width: 0px;
+	padding:24px 0px;
+	font-size: 18px;
+	color: #fff;
+	background: rgba(0, 0, 0, .8);
+	position: absolute;
+	overflow: hidden;
+}
+p.left.sec01 {
+	top: 40%;
+	left: 0;
+}
+p.right.sec01 {
+	top: 40%;
+	right: 0;
+}
+/*섹션3:스크롤바*/
+span.baseBar {
+	display: block;
+	width: 100%;
+	height: 1.5px;
+	margin: 0 auto;
+	background: #ccc;
+	border-radius: 2px;
+	position: relative;
+}
+span.baseBar span.selectBar{
+	display: block;
+	height: 1.5px;
+	background: #333;
+	border-radius: 2px;
+}
+span.baseBar span.selectBar.sec01{
+	position: absolute;
+	left: 0;
+	width: 50%;
+}
+
+/*섹션4 : 주요 성분 라인업 소개 - 오른쪽사진*/
+main section#third article.leftEx.sec04 h2 {
+	font-size: 16px;
+	padding-bottom: 20px;
+	font-weight: normal;
+}
+main section#third article.leftEx.sec04 h6 {
+	font-size: 32px;
+	padding-bottom: 20px;
+	font-weight: normal;
+} 
+main section#third article.rightEx.sec04 span {
+	height: 540px;
+	background: url(../img/img-vi.jpg);
+	background-size: 100%;
+	background-position: 10% 40% ;
+}
+main section#third::after {
+	clear: both;
+	display: block;
+	content: '';
+}
+
+/*섹션5 : 헤어제품 소개-샴푸,컨디셔너*/
+main article.leftEx.sec05 {
+	padding: 60px 0 25px 80px;
+}
+main article.leftEx.sec05 h2 {
+	font-size: 16px;
+	padding-bottom: 20px;
+	font-weight: normal;
+}
+main article.rightEx.sec05 p {
+	padding: 0 10px;
+	width: 75%;
+	font-size: 16px;
+	line-height: 160%;
+}
+section#hairProd .sec05:after {
+	clear: both;
+	display: block;
+	content: '';
+}
+
+main article.hair div {
+	width: 50%;
+	height: 640px;
+}
+main article.hair div#shampoo {
+	float: left;
+	background: url(../img/img-hair01-sham.png);
+	background-color: #d4c0a9 ;
+	background-size: 30%;
+	background-repeat: no-repeat;
+	background-position: 75% 85%;
+}
+main article.hair div#conditioner {
+	float: right;
+	background: url(../img/img-hair02-con.png);
+	background-color: #d4c0a9 ;
+	background-size: 30%;
+	background-repeat: no-repeat;
+	background-position: 75% 85%;
+}
+main article.hair h2 {
+	font-size: 28px;
+	font-weight: normal;
+	text-align: center;
+	margin: 60px 0 40px;
+}
+main article.hair div p {
+	text-align: center;
+	line-height: 300%;
+}
+main article.hair div p:nth-child(3) {
+	font-size: 14px;
+}
+main article.hair div p a {
+	color: #333;
+	text-decoration: underline;
+}
+main article.hair:after {
+	clear: both;
+	display: block;
+	content: '';
+}
+
+/*섹션6 : 인기상품 바로가기*/
+section#best {
+	width: 100%;
+	overflow: hidden;
+	padding: 50px 0;
+	text-align: center;
+	position: relative;
+}
+section#best h2 {
+	font-size: 32px;
+	font-weight: normal;
+	padding: 100px 0 80px;
+	text-align: left;
+	margin-left: 4%;
+}
+section#best div.bestwrap{
+	width: 90%;
+	margin: 0 5%;
+	overflow: hidden;
+}
+section#best div.bestwrap ul.best {
+	display: flex;
+	flex-flow: row nowrap;
+	width: 152%;
+	height: 520px;
+}
+section#best div.bestwrap ul.best li {
+	width: 16.6%;
+	display: inline-block;
+	text-align: center;
+}
+
+section#best div.bestwrap ul.best li.hidden a{
+	display: none;
+}
+section#best div.bestwrap ul.best li.hidden span {
+	display: none;
+}
+
+section#best div.bestwrap ul.best li a{
+	display: block;
+	color: #333;
+	height: 40px;
+	padding-top: 450px;
+	font-size: 14px;
+	background: url(../img/img-06-tacit.png);
+	background-size: 92%;
+	background-repeat: no-repeat;
+	background-position: 50% 60%;
+}
+section#best div.bestwrap ul.best li:nth-child(2) a {
+	background: url(../img/img-08-hwyl.png);
+	background-size: 92%;
+	background-repeat: no-repeat;
+	background-position: 50% 60%;
+}
+section#best div.bestwrap ul.best li:nth-child(3) a {
+	background: url(../img/img-12-rehand.png);
+	background-size: 84%;
+	background-repeat: no-repeat;
+	background-position: 50% 0%;
+}
+section#best div.bestwrap ul.best li:nth-child(4) a {
+	background: url(../img/img-07-room.png);
+	background-size: 90%;
+	background-repeat: no-repeat;
+	background-position: 50% 0;
+}
+section#best div.bestwrap ul.best li:nth-child(5) {
+	display: none;
+}
+section#best div.bestwrap ul.best li:nth-child(6){
+	display: none;
+}
+section#best div.bestwrap ul.best li:nth-child(5) a {
+	background: url(../img/img-09-geranium.png);
+	background-size: 85%;
+	background-repeat: no-repeat;
+	background-position: 50% 35%;
+}
+section#best div.bestwrap ul.best li:nth-child(6) a {
+	background: url(../img/img-11-hand.png);
+	background-size: 84%;
+	background-repeat: no-repeat;
+	background-position: 50% 0;
+}
+section#best div.bestwrap ul.best li a:hover {
+	text-decoration: underline;
+}
+section#best div.bestwrap ul.best li span {
+	display: block;
+	font-size: 14px;
+}
+span.baseBar {
+	display: block;
+	width: 100%;
+	height: 1.5px;
+	margin: 0 auto;
+	background: #ccc;
+	border-radius: 2px;
+	position: relative;
+}
+span.baseBar span.selectBar{
+	display: block;
+	height: 1.5px;
+	background: #333;
+	border-radius: 2px;
+}
+span.baseBar span.selectBar.sec01{
+	position: absolute;
+	left: 0;
+	width: 50%;
+}
+
+/*★가로 스크롤바*/
+span.baseBar.sec07 {
+	margin-top: 30px;
+}
+span.selectBar.sec07 {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 33.3%;
+}
+p.left.sec07 {
+	top: 55%;
+	left: 0;
+}
+p.right.sec07 {
+	top: 55%;
+	right: 0;
+}
+
+/*섹션7 : 스토어*/
+section#storeloca {
+	width: 100%;
+	height: 680px;
+}
+article.sec06{
+	display: block;
+	position: relative;
+	height: 580px;
+	overflow: hidden;
+	padding-bottom: 0px;
+}
+article.sec06 div.storewrap {
+	width: 300%;
+}
+article.sec06 a.loca{
+	display: block;
+	width: 33.33%;
+	height: 540px;
+	float: left;
+}
+article.sec06 p.storename {
+	position: absolute;
+	font-size: 14px;
+	top: 105%;
+	display: none;
+}
+article.sec06 div.namewrap {
+	width: 100px;
+	display: block;
+	position: absolute;
+	top: 105%;
+}
+article.sec06 p.storename.shoploca {
+	display: block;
+	top: 105%;
+}
+article.sec06 span#hannam {
+	background: url(../img/img-store-hn.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+article.sec06 span#garosu {
+	background: url(../img/img-store-grs.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+article.sec06 span#samcheong{
+	background: url(../img/img-store-sc.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+p.left.store {
+	text-align: center;
+	top:45%;
+	left: 0;
+}
+p.right.store {
+	text-align: center;
+	top: 45%;
+	right: 0;
+}
+
+
+article.sec06 span.baseBar.store {
+	position: relative;
+	top: 102%;
+	width: 100%;
+	height: 1.5px;
+}
+article.sec06 span.selectBar.store{
+	width: 33.3%;
+	height: 1.5px;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+section#store:after {
+	clear: both;
+	display: block;
+	content: '';
+}
+
+/*섹션8 : 시즌 슬로건*/
+section#title {
+	width: 100%;
+	height: 100px;
+	position: relative;
+	padding: 400px 0;
+}
+section#title strong {
+	display: block;
+	width: 100%;
+	text-align: center;
+	font-size: 24px;
+	line-height: 36px;
+}
+section#title h3 {
+	text-align: center;
+	font-size: 16px;
+	line-height: 26px;
+}
+
+
+/*푸터*/
+footer {
+	background: #222;
+	color: #fff;
+	padding-top: 50px;
+}
+footer a {
+	color: #fff;
+}
+footer h5.workmenu {
+	font-size: 16px;
+	font-weight: normal;
+	padding-bottom: 20px;
+	text-align: left;
+	padding-right: 10px;
+	border-bottom: 1px solid #fff;
+}
+
+footer img {
+	margin-left: 8px;
+	width: 9px;
+}
+
+/*푸터 1단*/
+footer div.upper, footer div.bottom, footer div.row {
+	width: 100%;
+}
+footer div.upper {
+	height: 350px;
+}
+footer ul.footup, footer ul.footbot{
+	display: flex;
+	flex-flow: row nowrap;
+	width: 96%;
+	margin: 0 auto;
+}
+.footupcon, .footbotcon {
+	width: 100%;
+}
+.footupcon:nth-child(1) {width: 43%;}
+.footupcon:nth-child(2) {width: 19%;}
+.footupcon:nth-child(3) {width: 19%;}
+.footupcon:nth-child(4) {width: 19%;}
+.footbotcon:nth-child(1) {width: 43%;}
+.footbotcon:nth-child(2) {width: 19%;}
+.footbotcon:nth-child(3) {width: 19%;}
+.footbotcon:nth-child(4) {width: 19%;}
+
+
+/*★푸터상단 스타일*/
+footer div.upper div.email span.mailbox {
+	width: 98%;
+	height: 46px;
+	display: block;
+	box-sizing: border-box;
+	background-color: #222;
+	border: 1px solid #fff;
+	border-radius: 5px;
+	padding: 5px;
+	position: relative;
+}
+footer div.upper div.email input#email {
+	width: 88%;
+	height: 30px;
+	text-align: left;
+	color: #fff;
+	font-size: 18px;
+	padding: 2px 5px;
+	background-color: #222;
+	border: 0px;
+}
+div.email span.mailbox a {
+	display: inline-block;
+	position: absolute;
+	top: 13px;
+	right: 15px;
+}
+div.email span.mailbox a img {
+	width: 18px;
+}
+footer div.upper div.email p {
+	padding: 20px 0;
+	font-size: 14px;
+}
+footer div.upper div.email label {
+	font-size: 14px;
+}
+footer div.upper div.loca ul li a {
+	text-decoration: underline;
+}
+footer ul {
+	padding-top: 10px;
+}
+footer ul li {
+	padding: 10px 0;
+	font-size: 14px;
+}
+
+/*푸터:2단*/
+footer div.bottom {
+	height: 280px;
+}
+footer div.bottom div.vegan h5 {
+	width: 95%;
+}
+footer div.bottom div.vegan span {
+	display: inline-block;
+	padding: 20px 0;
+	font-size: 14px;
+}
+footer div.bottom div.vegan a {
+	padding: 20px 0;
+	font-size: 14px;
+	text-decoration: underline;
+}
+footer div.bottom div.info p {
+	padding-top: 20px;
+	font-size: 14px;
+	line-height: 180%;
+	letter-spacing: .5px;
+}
+
+footer div.row {
+	height: 72px;
+	background: #222;
+}
+footer div.row span {
+	display: block;
+	height: 1.5px;
+	background: #ccc;
+}
+footer div.row p {
+	padding-top: 25px;
+	padding-left: 40px;
+	font-size: 18px;
+	font-weight: 600;
+}
+
+/*배송조회*/
+div.tracking {
+	background: rgba(0, 0, 0, 0.6);
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	display: none;
+}
+div.tracking div.back {
+	width: 640px;
+	height: 400px;
+	background: #fff;
+	text-align: center;
+	border: 1px solid #333;
+	position: fixed;
+	top: 20%;
+	left: 50%;
+	margin-left: -320px;
+	z-index: 2;
+}
+div.tracking div.back a{
+	display: block;
+	text-align: right;
+	padding-top: 30px;
+	padding-right: 30px;
+}
+div.tracking div.back a img {
+	width: 15px;
+}
+div.tracking div.back h1 {
+	font-size: 22px;
+	text-align: left;
+	padding: 70px 55px 20px;
+}
+div.tracking div.back input {
+	text-align: left;
+	width: 62%;
+	font-size: 18px;
+	padding: 12px;
+	margin-top: 70px;
+	border: 0px;
+	border: 1px solid #333;
+}
+div.tracking div.back button.order {
+	width: 15%;
+	font-size: 16px;
+	background: #333;
+	color: #fff;
+	padding: 14px;
+	border: 0px;
+}
+.tracking.check {
+	display: block;
+}
